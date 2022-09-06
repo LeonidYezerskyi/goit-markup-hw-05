@@ -117,7 +117,6 @@ p {
 .link, .header-email, .contact-phone {
     padding-top: 32px;
     padding-bottom: 32px;
-    transition: opacity 250ms var(--cubic);
 }
 
 .site-nav {
@@ -131,7 +130,7 @@ p {
     line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
-    transition: color 250ms var(transition-timing);
+    transition: color 250ms var(--cubic);
 }
 
 .current {
@@ -172,7 +171,8 @@ margin-left: 50px;
 }
 
 .icon-mail {
-    fill: var(--primary-text-color);
+    fill: currentColor;
+    transition: fill 250ms var(--cubic);
 }
 
 .contact-nav a:hover .icon-mail,
@@ -186,7 +186,7 @@ margin-left: 50px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
-    transition: opacity 250ms var(--cubic);
+    transition: color 250ms var(--cubic);
 }
 
 .contact-nav a:hover,
@@ -211,14 +211,13 @@ margin-left: 50px;
 
 .icon-phone {
     fill: currentColor;
+    transition: fill 250ms var(--cubic);
 }
 
 .contact-nav a:hover .icon-phone,
 .contact-nav a:focus .icon-phone {
     fill: var(--acent-color);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+  }
 
 /* main */
 .hero {
@@ -260,7 +259,6 @@ margin-left: 50px;
     line-height: 1.88;
     letter-spacing: 0.06em;
     padding: 10px 32px;
-
 }
 
 .benefit-item {
@@ -422,7 +420,8 @@ width: 370px;
     border-radius: 50%;
     fill: #AFB1B8;
     margin-top: 16px;
-    transition: opacity 250ms var(--cubic);
+    transition: background-color 250ms var(--cubic),
+    fill 250ms var(--cubic);
 }
  
 .members-link:hover,
@@ -452,7 +451,7 @@ width: 370px;
     fill: #AFB1B8;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
-    transition: opacity 250ms var(--cubic);
+    transition: fill 250ms var(--cubic), border 250ms var(--cubic);
 }
 
 .company-link:hover,
@@ -503,7 +502,7 @@ width: 370px;
     font-style: normal;
     line-height: 1.71;
     text-decoration: none;
-    transition: opacity 250ms var(--cubic);
+    transition: color 250ms var(--cubic);
 }
 
 .address-title {
@@ -511,7 +510,7 @@ width: 370px;
     font-style: normal;
     line-height: 1.71;
     text-decoration: none;
-    transition: opacity 250ms var(--cubic);
+    transition: color 250ms var(--cubic);
 }
 
 .address-list:not(:last-child) {
@@ -542,7 +541,7 @@ width: 370px;
 }
 
 .network-link {
-width: 44px;
+    width: 44px;
     height: 44px;
     display: flex;
     align-items: center;
@@ -550,7 +549,7 @@ width: 44px;
     border-radius: 50%;
     fill: var(--hero-text-color);
     background-color: rgba(255, 255, 255, 0.1);
-    transition: opacity 250ms var(--cubic);
+    transition: background-color 250ms var(--cubic);
 }
 
 .network-link:hover,
@@ -569,7 +568,7 @@ width: 44px;
     background-color: rgba(0, 0, 0, 0.2);
     visibility: visible;
     opacity: 1;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms var(--cubic), visibility 250ms var(--cubic);
 
 }
 
@@ -595,7 +594,7 @@ width: 44px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
                 0px 1px 1px rgba(0, 0, 0, 0.14),
                 0px 2px 1px rgba(0, 0, 0, 0.2);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);  
+    transition: transform 250ms var(--cubic);  
 }
 
 .button-close {
@@ -635,7 +634,7 @@ width: 44px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
-    transition: opacity 250ms var(--cubic);
+    transition: color 250ms var(--cubic), background-color 250ms var(--cubic);
 }
 
 .filter-nav .button:hover,
@@ -648,7 +647,7 @@ width: 44px;
     border: transparent;
     padding: 6px 22px;
     border-radius: 4px;
-    transition: opacity 250ms var(--cubic);
+    transition: box-shadow 250ms var(--cubic);
 }
 
 .button:hover,
@@ -678,7 +677,7 @@ width: 44px;
     color: var(--hero-text-color);
     background-color: var(--acent-color);
     transform: translateY(100%);
-    transition: transform 250ms linear;
+    transition: transform 250ms var(--cubic);
 
 }
 
@@ -698,13 +697,15 @@ width: 44px;
     text-decoration: none;
 }
 
+.works-item  {
+    transition: transform 250ms var(--cubic), box-shadow 250ms var(--cubic);
+}
+
 .works-item:hover {
     box-shadow: 
     0px 1px 1px rgba(0, 0, 0, 0.12),
     0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .content-border {
